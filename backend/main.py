@@ -1,7 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, Request
 from PyPDF2 import PdfReader
-from pydantic import BaseModel
-import streamlit as st
+from pydantic import BaseModel 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
 import json
