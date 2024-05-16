@@ -3,6 +3,9 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { BeatLoader } from "react-spinners";
+import iconoir_send from "../assets/iconoir_send.svg";
+import Icon from "../assets/Icon.svg";
+import nameicon from "../assets/name.svg";
 
 const Home = () => {
   const location = useLocation();
@@ -53,14 +56,14 @@ const Home = () => {
         {final.map((item, index) => (
           <div key={index}>
             <div className="flex gap-x-3 mt-[1.3rem]">
-              <img src="name.svg" alt="usrname" />
+              <img src={nameicon} alt="usrname" />
               <h1 className="text-black p-2 m-1">{item.question}</h1>
             </div>
             {item.answer === "loading..." ? (
               <BeatLoader size={10} color="#36d7b7" />
             ) : (
               <div className="flex items-center gap-x-3 mt-[2rem]">
-                <img src="Icon.svg" alt="icon" />
+                <img src={Icon} alt="icon" />
                 <p className=" text-black p-2 m-1">{item.answer}</p>
               </div>
             )}
@@ -82,7 +85,7 @@ const Home = () => {
             className="cursor-pointer"
             onClick={handleButtonClick}
           >
-            <img src="iconoir_send.svg" alt="send" className="w-[30px]" />
+            <img src={iconoir_send} alt="send" className="w-[30px]" />
           </button>
         </div>
       </div>

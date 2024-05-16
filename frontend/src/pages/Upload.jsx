@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
+import pdf from "../assets/pdf.svg";
 
 const UploadComponent = () => {
   const [file, setFile] = useState(null);
@@ -56,7 +57,7 @@ const UploadComponent = () => {
           />
           <label htmlFor="fileInput" id="fileInputLabel">
             <div className="flex justify-center items-center cursor-pointer">
-              <img src="pdf.svg" alt="pdf_logo" className="w-[60px]" />
+              <img src={pdf} alt="pdf_logo" className="w-[60px]" />
             </div>
             <div className="flex justify-center items-center pt-5">
               {file !== null ? (
