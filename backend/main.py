@@ -27,7 +27,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
- 
+from google.auth.transport.requests import Request as req
 from database import Base
 
 import google.generativeai as genai
@@ -46,7 +46,7 @@ if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_info(json.load(f), SCOPES)
 if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
+        creds.refresh(req())
     else:
         flow = InstalledAppFlow.from_client_secrets_file(
             'credentials/client_secret.json', SCOPES)
