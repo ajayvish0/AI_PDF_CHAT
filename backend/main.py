@@ -103,6 +103,10 @@ def get_conversation_chain():
 
 from typing import List  # Import the List class from the typing module
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the PDF processing API"}
+
 @app.post("/upload_pdf/")
 async def upload_pdf(files: List[UploadFile] = File(...), db=Depends(get_db)):
     pdf_docs = []
