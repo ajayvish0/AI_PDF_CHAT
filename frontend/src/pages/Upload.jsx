@@ -22,11 +22,11 @@ const UploadComponent = () => {
 
     const formData = new FormData();
     formData.append("files", file); // Use "files" to match the server-side expectation
-    console.log([...formData]); // Log formData content for debugging
+    console.log([...formData]);
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/upload_pdf/",
+        "https://ai-pdf-chat.onrender.com/upload_pdf/",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -64,7 +64,7 @@ const UploadComponent = () => {
                   {file.name}
                 </div>
               ) : (
-                <div className="cursor-pointer">
+                <div className="cursor-pointer text-xl">
                   Upload your PDF file here!!
                 </div>
               )}
