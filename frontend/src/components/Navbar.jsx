@@ -5,11 +5,11 @@ import pdf from "../assets/pdf.svg";
 
 const Navbar = ({ name }) => {
   return (
-    <div className="  shadow-lg bg-white sticky top-0 w-full  py-2 px-1 md:px-[2rem] flex justify-between">
+    <div className="  shadow-lg bg-white sticky top-0 w-full  pt-3 pb-[1.2rem] px-1 md:px-[3rem] flex justify-between">
       <div>
         <Logo />
       </div>
-      <div className="  items-center flex  ">
+      <div className="  items-center flex pt-1 ">
         {name && (
           <div className="flex items-center gap-x-1">
             <img src={pdf} />

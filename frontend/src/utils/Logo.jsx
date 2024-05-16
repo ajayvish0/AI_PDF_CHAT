@@ -22,9 +22,9 @@ const Logo = () => {
           fill="white"
         />
       </svg>
-      <div className="flex flex-col ">
+      <div className="flex flex-col relative">
         <h1 className="text-[1.7rem] font-extrabold pt-[1px]   ">planet</h1>
-        <p className="text-xs pl-2 leading-2">
+        <p className="text-xs pl-2 absolute bottom-[-0.5rem] ">
           formerly{" "}
           <span className="text-green-500 font-semibold text-right">DPhi</span>
         </p>
