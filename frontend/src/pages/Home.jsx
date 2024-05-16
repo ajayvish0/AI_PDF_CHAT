@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { BeatLoader } from "react-spinners";
-import iconoir_send from "../assets/Vector.png";
-import Icon from "../assets/logo.png";
-import nameicon from "../assets/name.png";
+import iconoir_send from "../assets/iconoir_send.svg";
+import Icon from "../assets/Icon.svg";
+import nameicon from "../assets/name.svg";
 
 const Home = () => {
   const location = useLocation();

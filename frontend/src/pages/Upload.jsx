@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
-import pdf from "../assets/pdf.png";
+import pdf from "../assets/pdf.svg";
 
 const UploadComponent = () => {
   const [file, setFile] = useState(null);
