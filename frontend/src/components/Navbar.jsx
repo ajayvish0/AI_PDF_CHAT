@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../utils/Logo";
-import gala_add from "../assets/gala_add.svg";
-import pdf from "../assets/pdf.svg";
+import gala_add from "../assets/gala_add.png";
+import pdf from "../assets/pdf.png";
 
 const Navbar = ({ name }) => {
   return (
