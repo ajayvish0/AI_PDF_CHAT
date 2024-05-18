@@ -52,7 +52,7 @@ const Home = () => {
     <div className="relative h-screen">
       <Navbar name={fileName} />
 
-      <div className="pt-[1rem] sm:px-[8rem] px-[2rem]">
+      <div className="pt-[1rem] sm:px-[8rem] px-[2rem] pb-[5rem] ">
         {final.map((item, index) => (
           <div key={index}>
             <div className="flex gap-x-3 mt-[1.3rem]">
@@ -63,21 +63,25 @@ const Home = () => {
               <BeatLoader size={10} color="#36d7b7" />
             ) : (
               <div className="flex items-center gap-x-3 mt-[2rem]">
-                <img src={Icon} alt="icon" />
+                <img
+                  src={Icon}
+                  alt="icon"
+                  className="flex self-start pt-[0.8rem]"
+                />
                 <p className=" text-black p-2 m-1">{item.answer}</p>
               </div>
             )}
           </div>
         ))}
       </div>
-      <div className="fixed bottom-0 w-full flex justify-center pb-4 sm:px-[8rem] px-[2rem]  ">
+      <div className="fixed bottom-0 w-full flex justify-center pb-4 sm:px-[8rem] px-[2rem] bg-white ">
         <div className="border-slate-300 border-2 rounded-xl px-6 h-[50px] w-full shadow-xl  flex items-center">
           <input
             type="text"
             value={question}
             onKeyDown={handleKeyDown}
             placeholder="Send a message..."
-            className="outline-none border-none bg-inherit mr-2 w-full  px-2"
+            className="outline-none border-none  mr-2 w-full  px-2"
             onChange={(e) => setQuestion(e.target.value)}
           />
           <button

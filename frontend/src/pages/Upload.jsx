@@ -76,7 +76,11 @@ const UploadComponent = () => {
             <div>{loading && <BounceLoader size={30} color="#36d7b7" />}</div>
             <button
               disabled={loading}
-              className="text-xl text-green-500 shadow-lg py-2 px-5 border-2 border-slate-300 rounded-lg hover:bg-green-400 hover:text-white "
+              className={` ${
+                loading
+                  ? "cursor-not-allowed text-slate-500 bg-green-950"
+                  : "hover:bg-green-400  text-green-500  hover:text-white"
+              }   text-xl  shadow-lg py-2 px-5 border-2 border-slate-300 rounded-lg   `}
             >
               Upload pdf
             </button>
