@@ -1,8 +1,36 @@
-# React + Vite
+## Setup and Installation
+Navigate to the frontend directory:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```bash
+ 
+cd ../frontend
+```
+Install dependencies:
 
-Currently, two official plugins are available:
+```bash
+ 
+npm install
+```
+Run the frontend development server:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+ 
+npm run dev 
+```
+### Key Files
+- `src/App.js`: Main React component that sets up the application routes.
+- `src/components/`: Contains reusable React components.
+- `src/pages/`: Contains React components for different pages (e.g., upload page, QA page).
+
+### Database
+- **PostgreSQL**: Used for storing metadata of uploaded documents.
+- **Configuration**: The database connection is configured in `database.py` in the backend.
+
+### File Storage
+- **Google Drive**: Used for securely storing the uploaded PDF documents.
+
+### Usage
+- Upload PDF Documents: Use the frontend interface to upload PDF documents.
+- Ask Questions: Once a document is uploaded, users can ask questions regarding its content through the frontend interface.
+- Receive Answers: The backend processes the document using NLP and returns answers to the user's questions.
+ 
